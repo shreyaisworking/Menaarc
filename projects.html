@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Menaarc Portfolio – Commercial, Retail & F&B Interiors UAE</title>
+  <meta name="description" content="Explore Menaarc's project portfolio: retail fit-outs, F&B interiors, commercial offices, and more across Dubai and the UAE. Global brands, local expertise." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--c-bg:#F4F1EC;--c-bg-warm:#EDE8E0;--c-sand:#C4B9A8;--c-ink:#1C1C1A;--c-ink-soft:#6B6B66;--c-white:#FAFAF8;--c-accent:#8B7355;--ff-display:'Cormorant Garamond',Georgia,serif;--ff-body:'Montserrat',sans-serif;--ease:cubic-bezier(0.16,1,0.3,1);--nav-h:72px;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--c-bg);color:var(--c-ink);font-family:var(--ff-body);overflow-x:hidden;}
+    img{display:block;max-width:100%;}
+    a{text-decoration:none;color:inherit;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:rgba(244,241,236,0.94);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color 0.3s;}
+    nav.scrolled{border-bottom-color:rgba(196,185,168,0.5);}
+    .nav-logo{font-family:var(--ff-body);font-weight:600;font-size:16px;letter-spacing:0.2em;text-transform:uppercase;}
+    .nav-logo sup{color:var(--c-accent);font-size:10px;margin-left:2px;}
+    .nav-links{display:flex;gap:36px;list-style:none;}
+    .nav-links a{font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--c-ink-soft);font-weight:500;transition:color 0.2s;position:relative;}
+    .nav-links a::after{content:'';position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--c-accent);transition:width 0.3s var(--ease);}
+    .nav-links a:hover,.nav-links a.active{color:var(--c-ink);}
+    .nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+    .nav-cta{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;padding:10px 22px;border:1px solid var(--c-ink);color:var(--c-ink);background:transparent;cursor:pointer;font-family:var(--ff-body);transition:background 0.25s,color 0.25s;}
+    .nav-cta:hover{background:var(--c-ink);color:var(--c-white);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;}
+    .hamburger span{width:22px;height:1px;background:var(--c-ink);display:block;}
+    .mobile-menu{display:none;position:fixed;inset:0;background:var(--c-bg);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:36px;}
+    .mobile-menu.open{display:flex;}
+    .mobile-menu a{font-size:32px;font-family:var(--ff-display);font-weight:300;color:var(--c-ink);}
+    .mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;font-size:24px;cursor:pointer;color:var(--c-ink-soft);}
+    .btn-primary{font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;font-weight:600;padding:16px 36px;background:var(--c-ink);color:var(--c-white);border:1px solid var(--c-ink);cursor:pointer;font-family:var(--ff-body);transition:background 0.25s,color 0.25s,border-color 0.25s;display:inline-block;}
+    .btn-primary:hover{background:var(--c-accent);border-color:var(--c-accent);}
+    .sticky-quote{position:fixed;right:-46px;top:50%;transform:translateY(-50%) rotate(-90deg);z-index:90;background:var(--c-accent);color:var(--c-white);font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;padding:12px 24px;cursor:pointer;font-family:var(--ff-body);border:none;}
+    .sticky-quote:hover{background:var(--c-ink);}
+    .popup-overlay{position:fixed;inset:0;background:rgba(28,28,26,0.7);z-index:200;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;backdrop-filter:blur(6px);}
+    .popup-overlay.open{opacity:1;pointer-events:all;}
+    .popup{background:var(--c-white);width:90%;max-width:520px;padding:52px 48px;position:relative;transform:translateY(24px);transition:transform 0.4s var(--ease);max-height:90vh;overflow-y:auto;}
+    .popup-overlay.open .popup{transform:translateY(0);}
+    .popup-close{position:absolute;top:20px;right:22px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--c-ink-soft);}
+    .popup h3{font-family:var(--ff-display);font-size:36px;font-weight:300;margin-bottom:6px;}
+    .popup>p{font-size:13px;color:var(--c-ink-soft);margin-bottom:32px;}
+    .form-group{margin-bottom:22px;}
+    .form-group label{display:block;font-size:9.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--c-ink-soft);margin-bottom:8px;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 0;border:none;border-bottom:1px solid var(--c-sand);background:transparent;font-size:14px;font-family:var(--ff-body);color:var(--c-ink);outline:none;transition:border-color 0.2s;-webkit-appearance:none;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-bottom-color:var(--c-accent);}
+    .form-group textarea{resize:vertical;min-height:72px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+    .btn-submit{width:100%;padding:16px;background:var(--c-ink);color:var(--c-white);border:none;font-size:10.5px;letter-spacing:0.16em;text-transform:uppercase;font-weight:600;cursor:pointer;font-family:var(--ff-body);transition:background 0.25s;margin-top:8px;}
+    .btn-submit:hover{background:var(--c-accent);}
+
+    /* PAGE HERO */
+    .page-hero{padding-top:var(--nav-h);background:var(--c-bg-warm);padding:calc(var(--nav-h)+80px) 64px 80px;display:flex;flex-direction:column;justify-content:flex-end;}
+    .page-hero-label{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--c-accent);margin-bottom:20px;}
+    .page-hero h1{font-family:var(--ff-display);font-size:clamp(52px,7vw,100px);font-weight:300;line-height:1.05;margin-bottom:24px;}
+    .page-hero h1 em{font-style:italic;color:var(--c-accent);}
+    .page-hero p{font-size:15px;line-height:1.8;color:var(--c-ink-soft);font-weight:300;max-width:520px;}
+
+    /* FILTER BAR */
+    .filter-bar{background:var(--c-white);padding:0 64px;display:flex;gap:0;border-bottom:1px solid var(--c-sand);overflow-x:auto;position:sticky;top:var(--nav-h);z-index:50;}
+    .filter-btn{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;padding:18px 24px;cursor:pointer;color:var(--c-ink-soft);border-bottom:2px solid transparent;white-space:nowrap;transition:color 0.2s,border-color 0.2s;background:none;border-top:none;border-left:none;border-right:none;font-family:var(--ff-body);}
+    .filter-btn:hover,.filter-btn.active{color:var(--c-ink);border-bottom-color:var(--c-accent);}
+
+    /* PROJECTS GRID */
+    .projects-section{padding:80px 64px;}
+    .projects-count{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--c-ink-soft);margin-bottom:40px;}
+    .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+    .project-item{position:relative;overflow:hidden;background:var(--c-sand);cursor:pointer;}
+    .project-item.hidden{display:none;}
+    .project-item.span2{grid-column:span 2;}
+    .proj-img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform 0.7s var(--ease);display:block;}
+    .project-item.span2 .proj-img{aspect-ratio:16/7;}
+    .proj-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,28,26,0.8) 0%,transparent 55%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;transform:translateY(6px);transition:transform 0.35s var(--ease);}
+    .project-item:hover .proj-img{transform:scale(1.06);}
+    .project-item:hover .proj-overlay{transform:translateY(0);}
+    .proj-cat{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--c-sand);margin-bottom:6px;}
+    .proj-name{font-family:var(--ff-display);font-size:22px;color:var(--c-white);font-weight:400;margin-bottom:4px;}
+    .proj-loc{font-size:10.5px;color:rgba(255,255,255,0.55);font-weight:300;}
+    .proj-year{position:absolute;top:20px;right:20px;background:rgba(244,241,236,0.92);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:5px 10px;color:var(--c-ink);font-weight:600;}
+
+    /* CTA STRIP */
+    .cta-strip{background:var(--c-ink);color:var(--c-white);padding:80px 64px;display:flex;justify-content:space-between;align-items:center;gap:40px;}
+    .cta-strip h2{font-family:var(--ff-display);font-size:clamp(32px,3.5vw,56px);font-weight:300;}
+    .cta-strip h2 em{font-style:italic;color:var(--c-sand);}
+    .cta-strip .btn-primary{background:var(--c-accent);border-color:var(--c-accent);flex-shrink:0;}
+    .cta-strip .btn-primary:hover{background:var(--c-white);color:var(--c-ink);border-color:var(--c-white);}
+
+    footer{background:var(--c-ink);color:var(--c-white);padding:80px 64px 40px;border-top:1px solid rgba(255,255,255,0.06);}
+    .footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .footer-brand-name{font-size:14px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:6px;}
+    .footer-brand-sub{font-size:9.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--c-sand);margin-bottom:20px;}
+    .footer-brand p{font-size:13px;line-height:1.8;color:rgba(255,255,255,0.45);font-weight:300;}
+    .footer-col h4{font-size:9.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--c-sand);margin-bottom:20px;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+    .footer-col ul a{font-size:13px;color:rgba(255,255,255,0.55);font-weight:300;transition:color 0.2s;}
+    .footer-col ul a:hover{color:var(--c-white);}
+    .footer-bottom{padding-top:28px;display:flex;justify-content:space-between;}
+    .footer-copy,.footer-loc{font-size:11px;color:rgba(255,255,255,0.28);}
+
+    @media(max-width:1024px){
+      nav{padding:0 32px;}.nav-links,.nav-cta{display:none;}.hamburger{display:flex;}
+      .page-hero{padding:calc(var(--nav-h)+40px) 32px 56px;}
+      .filter-bar{padding:0 32px;}
+      .projects-section{padding:56px 32px;}
+      .projects-grid{grid-template-columns:1fr 1fr;}
+      .project-item.span2{grid-column:span 2;}
+      .cta-strip{padding:64px 32px;flex-direction:column;text-align:center;}
+      .footer-top{grid-template-columns:1fr 1fr;}footer{padding:60px 32px 36px;}
+    }
+    @media(max-width:640px){
+      nav{padding:0 20px;}
+      .page-hero{padding:calc(var(--nav-h)+20px) 20px 44px;}
+      .filter-bar{padding:0 16px;}
+      .projects-section{padding:44px 20px;}
+      .projects-grid{grid-template-columns:1fr;}
+      .project-item.span2{grid-column:span 1;}
+      .project-item.span2 .proj-img{aspect-ratio:4/3;}
+      .cta-strip{padding:56px 20px;}
+      .footer-top{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;gap:8px;}
+      footer{padding:56px 20px 32px;}
+      .popup{padding:40px 24px;}.form-row{grid-template-columns:1fr;}
+      .sticky-quote{display:none;}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">MENAARC<sup>®</sup></a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="journey.html">Journey</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="clients.html">Clients</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openPopup()">Get a Quote</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="about.html" onclick="closeMobile()">About</a>
+  <a href="services.html" onclick="closeMobile()">Services</a>
+  <a href="journey.html" onclick="closeMobile()">Journey</a>
+  <a href="projects.html" onclick="closeMobile()">Projects</a>
+  <a href="clients.html" onclick="closeMobile()">Clients</a>
+  <a href="contact.html" onclick="closeMobile()">Contact</a>
+</div>
+<button class="sticky-quote" onclick="openPopup()">Get a Quote</button>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <p class="page-hero-label">Our Portfolio</p>
+  <h1>Selected <em>Projects</em></h1>
+  <p>A curated view of our work across retail, F&B, and commercial spaces in Dubai and across the UAE.</p>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All Projects</button>
+  <button class="filter-btn" data-filter="retail">Retail</button>
+  <button class="filter-btn" data-filter="fb">F&B</button>
+  <button class="filter-btn" data-filter="commercial">Commercial</button>
+  <button class="filter-btn" data-filter="2026">2026</button>
+  <button class="filter-btn" data-filter="2025">2025</button>
+  <button class="filter-btn" data-filter="2024">2024</button>
+</div>
+
+<!-- PROJECTS GRID -->
+<section class="projects-section">
+  <p class="projects-count" id="projectCount">Showing all projects</p>
+  <div class="projects-grid" id="projectsGrid">
+
+    <div class="project-item span2" data-cat="retail" data-year="2026">
+      <span class="proj-year">2026</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=1000&auto=format&fit=crop&q=75" alt="Sacoor Brothers retail fit-out" />
+      <div class="proj-overlay"><span class="proj-cat">Retail Fit-Out</span><span class="proj-name">Sacoor Brothers</span><span class="proj-loc">DCC · MCCM · DFC · Doha · Marcato · Outlet Village</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2025">
+      <span class="proj-year">2025</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=700&auto=format&fit=crop&q=75" alt="Sushi Art restaurant design" />
+      <div class="proj-overlay"><span class="proj-cat">F&B</span><span class="proj-name">Sushi Art</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2024">
+      <span class="proj-year">2024</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=700&auto=format&fit=crop&q=75" alt="Rosa's Thai restaurant" />
+      <div class="proj-overlay"><span class="proj-cat">F&B</span><span class="proj-name">Rosa's Thai</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="retail" data-year="2024">
+      <span class="proj-year">2024</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=700&auto=format&fit=crop&q=75" alt="Paul & Shark Dubai Mall" />
+      <div class="proj-overlay"><span class="proj-cat">Retail</span><span class="proj-name">Paul &amp; Shark</span><span class="proj-loc">The Dubai Mall</span></div>
+    </div>
+
+    <div class="project-item span2" data-cat="fb" data-year="2023">
+      <span class="proj-year">2023</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1585518433434-3ab2a2fd3427?w=1000&auto=format&fit=crop&q=75" alt="Nash full fit-out" />
+      <div class="proj-overlay"><span class="proj-cat">F&B · Full Fit-Out</span><span class="proj-name">Nash</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2022">
+      <span class="proj-year">2022</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=700&auto=format&fit=crop&q=75" alt="Popeyes restaurant design" />
+      <div class="proj-overlay"><span class="proj-cat">F&B · QSR</span><span class="proj-name">Popeyes</span><span class="proj-loc">Multiple Locations, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2022">
+      <span class="proj-year">2022</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&auto=format&fit=crop&q=75" alt="Marugame Udon" />
+      <div class="proj-overlay"><span class="proj-cat">F&B</span><span class="proj-name">Marugame Udon</span><span class="proj-loc">Dubai Mall · Deira City Center · BurJuman · Ibn Battuta</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2021">
+      <span class="proj-year">2021</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=700&auto=format&fit=crop&q=75" alt="Peet's Coffee interior" />
+      <div class="proj-overlay"><span class="proj-cat">F&B · Café</span><span class="proj-name">Peet's Coffee</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2021">
+      <span class="proj-year">2021</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?w=700&auto=format&fit=crop&q=75" alt="Tim Hortons design" />
+      <div class="proj-overlay"><span class="proj-cat">F&B · Café</span><span class="proj-name">Tim Hortons</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item span2" data-cat="retail" data-year="2021">
+      <span class="proj-year">2021</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1000&auto=format&fit=crop&q=75" alt="Brooks Brothers retail" />
+      <div class="proj-overlay"><span class="proj-cat">Retail Fashion</span><span class="proj-name">Brooks Brothers</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="commercial" data-year="2020">
+      <span class="proj-year">2020</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=700&auto=format&fit=crop&q=75" alt="Righteous Office commercial" />
+      <div class="proj-overlay"><span class="proj-cat">Commercial Office</span><span class="proj-name">Righteous Office</span><span class="proj-loc">Dubai, UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="commercial" data-year="2020">
+      <span class="proj-year">2020</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=700&auto=format&fit=crop&q=75" alt="Vault House architecture" />
+      <div class="proj-overlay"><span class="proj-cat">Architecture &amp; Design</span><span class="proj-name">Vault House</span><span class="proj-loc">UAE</span></div>
+    </div>
+
+    <div class="project-item" data-cat="fb" data-year="2019">
+      <span class="proj-year">2019</span>
+      <img class="proj-img" src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=700&auto=format&fit=crop&q=75" alt="Bateel interior design" />
+      <div class="proj-overlay"><span class="proj-cat">F&B · Luxury</span><span class="proj-name">Bateel</span><span class="proj-loc">UAE</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <h2>Have a project in <em>mind?</em></h2>
+  <button class="btn-primary" onclick="openPopup()">Let's Talk →</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><p class="footer-brand-name">MENAARC</p><p class="footer-brand-sub">Architecture Consultants</p><p>Design &amp; Project Management Consultancy across the UAE and Middle East.</p></div>
+    <div class="footer-col"><h4>Navigation</h4><ul><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="journey.html">Journey</a></li><li><a href="projects.html">Projects</a></li><li><a href="clients.html">Clients</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Design &amp; Development</a></li><li><a href="services.html">Project Management</a></li><li><a href="services.html">Technical Design</a></li><li><a href="services.html">Authority Approvals</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+971508777810">+971 50 877 7810</a></li><li><a href="contact.html">Send a Message</a></li><li><a href="contact.html">Get a Quote</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Menaarc Architecture Consultants. All rights reserved.</p><p class="footer-loc">Dubai, United Arab Emirates</p></div>
+</footer>
+
+<div class="popup-overlay" id="quotePopup">
+  <div class="popup">
+    <button class="popup-close" onclick="closePopup()">✕</button>
+    <h3>Get a Quote</h3>
+    <p>Tell us about your project and we'll be in touch within 24 hours.</p>
+    <form onsubmit="submitForm(event)">
+      <div class="form-row"><div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" required /></div><div class="form-group"><label>Phone</label><input type="tel" placeholder="+971 xx xxx xxxx" /></div></div>
+      <div class="form-group"><label>Email</label><input type="email" placeholder="your@email.com" required /></div>
+      <div class="form-group"><label>Project Type</label><select><option value="">Select type</option><option>Retail Fit-Out</option><option>F&B Interior</option><option>Commercial Office</option><option>Authority Approvals</option><option>Full Design &amp; Build</option></select></div>
+      <div class="form-group"><label>Brief</label><textarea placeholder="Tell us about your project…"></textarea></div>
+      <button type="submit" class="btn-submit">Send Request →</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>20));
+  document.getElementById('hamburger').onclick=()=>document.getElementById('mobileMenu').classList.add('open');
+  document.getElementById('mobileClose').onclick=closeMobile;
+  function closeMobile(){document.getElementById('mobileMenu').classList.remove('open');}
+  function openPopup(){document.getElementById('quotePopup').classList.add('open');document.body.style.overflow='hidden';}
+  function closePopup(){document.getElementById('quotePopup').classList.remove('open');document.body.style.overflow='';}
+  document.getElementById('quotePopup').addEventListener('click',e=>{if(e.target===e.currentTarget)closePopup();});
+  function submitForm(e){e.preventDefault();const b=e.target.querySelector('.btn-submit');b.textContent='Sending…';setTimeout(()=>{b.textContent='✓ Sent!';setTimeout(closePopup,2000);},1200);}
+
+  // Filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.project-item');
+  const countEl = document.getElementById('projectCount');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      let visible = 0;
+      items.forEach(item => {
+        const match = f==='all' || item.dataset.cat===f || item.dataset.year===f;
+        item.classList.toggle('hidden',!match);
+        if(match) visible++;
+      });
+      countEl.textContent = f==='all' ? `Showing all projects` : `Showing ${visible} project${visible!==1?'s':''}`;
+    });
+  });
+</script>
+</body>
+</html>
