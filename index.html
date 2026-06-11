@@ -34,7 +34,7 @@
       border-bottom: 1px solid transparent; transition: border-color 0.3s;
     }
     nav.scrolled { border-bottom-color: rgba(196,185,168,0.5); }
-    .nav-logo { font-family: var(--ff-body); font-weight: 600; font-size: 16px; letter-spacing: 0.2em; text-transform: uppercase; }
+    .nav-logo { font-family: var(--ff-body); font-weight: 600; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
     .nav-logo sup { color: var(--c-accent); font-size: 10px; margin-left: 2px; }
     .nav-links { display: flex; gap: 36px; list-style: none; }
     .nav-links a { font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--c-ink-soft); font-weight: 500; transition: color 0.2s; position: relative; }
@@ -67,8 +67,7 @@
 
     .hero-right { position: relative; overflow: hidden; opacity: 0; animation: fadeIn 1.2s var(--ease) 0.4s forwards; }
     .hero-img { width: 100%; height: 100%; object-fit: cover; }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(196,185,168,0.12), transparent); }
-    .hero-badge { position: absolute; bottom: 48px; left: -28px; background: var(--c-white); padding: 20px 28px; box-shadow: 0 10px 50px rgba(28,28,26,0.14); }
+    .hero-overlay-box { position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%); }    .hero-badge { position: absolute; bottom: 48px; left: -28px; background: var(--c-white); padding: 20px 28px; box-shadow: 0 10px 50px rgba(28,28,26,0.14); }
     .hero-badge-num { font-family: var(--ff-display); font-size: 44px; font-weight: 300; color: var(--c-ink); line-height: 1; }
     .hero-badge-label { font-size: 9.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--c-ink-soft); margin-top: 6px; }
 
@@ -219,7 +218,9 @@
 <body>
 
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">MENAARC<sup>®</sup></a>
+  <a href="index.html" class="nav-logo">
+  <img src="images/Menaarc_logo.png" alt="Menaarc" height="145" />
+</a>
   <ul class="nav-links">
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
@@ -251,7 +252,7 @@
   <div class="hero-left">
     <p class="hero-eyebrow">UAE · Commercial · Retail · F&B</p>
     <h1 class="hero-h1">Spaces Designed<br>to <em>Perform</em></h1>
-    <p class="hero-body">Menaarc is a design and project management consultancy specialising in commercial, retail, and F&B interiors — from concept through authority approval to site completion.</p>
+    <p class="hero-body">Menaarc is a design and project management consultancy specialising in commercial, retail, and F&B interiors from concept through authority approval to site completion.</p>
     <div class="hero-actions">
       <a href="projects.html" class="btn-primary">View Projects</a>
       <a href="about.html" class="btn-ghost">Our Story <span class="arrow-icon">→</span></a>
@@ -269,7 +270,7 @@
 
 <!-- STATS -->
 <div class="stats-strip reveal">
-  <div class="stat-item"><span class="stat-num">2019</span><span class="stat-label">Founded in UAE</span></div>
+  <div class="stat-item"><span class="stat-num">2026</span><span class="stat-label">Founded in UAE</span></div>
   <div class="stat-item"><span class="stat-num">50+</span><span class="stat-label">Projects Delivered</span></div>
   <div class="stat-item"><span class="stat-num">30+</span><span class="stat-label">Global Brands</span></div>
   <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Core Disciplines</span></div>
@@ -280,7 +281,7 @@
   <div class="intro-left reveal">
     <p class="section-label">Who We Are</p>
     <h2 class="section-h2">Where <em>Design</em><br>Meets Compliance</h2>
-    <p class="section-body">Founded in 2019, Menaarc brings together strong design expertise and in-depth knowledge of developer and authority guidelines. Our team provides a seamless approach integrating concept design, technical documentation, authority submissions, and project management — ensuring every project is carefully developed and aligned with developer regulations.</p>
+    <p class="section-body">Founded in 2026, Menaarc brings together strong design expertise and in-depth knowledge of developer and authority guidelines. Our team provides a seamless approach integrating concept design, technical documentation, authority submissions, and project management, ensuring every project is carefully developed and aligned with developer regulations.</p>
     <br/><br/>
     <a href="about.html" class="btn-ghost" style="display:inline-flex;">Learn More <span class="arrow-icon" style="margin-left:8px;">→</span></a>
   </div>
@@ -289,7 +290,7 @@
       <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&auto=format&fit=crop&q=80" alt="Menaarc retail interior design portfolio" />
     </div>
     <div class="intro-quote">
-      <p>"From concept to completion — every space confidently delivered."</p>
+      <p>"From concept to completion. Every space confidently delivered."</p>
     </div>
   </div>
 </section>
@@ -369,7 +370,7 @@
   <div class="reveal">
     <p class="section-label">Let's Build Together</p>
     <h2 class="section-h2">Ready to <em>Start</em><br>Your Project?</h2>
-    <p class="section-body">From initial brief to final handover, Menaarc guides your project with precision — whether you're planning a new outlet or a full brand rollout.</p>
+    <p class="section-body">From initial brief to final handover, Menaarc guides your project with precision. Whether you're planning a new outlet or a full brand rollout.</p>
   </div>
   <div class="reveal">
     <div class="cta-box">
