@@ -81,10 +81,10 @@
     .stat-label{font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--c-ink-soft);font-weight:500;}
 
     /* TICKER CAROUSEL */
-    .ticker-section{background:var(--c-ink);padding:24px 0;overflow:hidden;position:relative;}
+    .ticker-section{background:#1c1b1a2b;padding:24px 0;overflow:hidden;position:relative;}
     .ticker-track{display:flex;gap:0;width:max-content;animation:ticker 32s linear infinite;}
     .ticker-track:hover{animation-play-state:paused;}
-    .ticker-item{font-family:var(--ff-display);font-size:22px;font-weight:300;color:rgba(255,255,255,0.3);padding:0 36px;white-space:nowrap;transition:color 0.2s;border-right:1px solid rgba(255,255,255,0.1);}
+    .ticker-item{font-family:var(--ff-display);font-size:22px;font-weight:300;color:rgba(255, 255, 255, 0);padding:0 36px;white-space:nowrap;transition:color 0.2s;border-right:1px solid rgba(255, 255, 255, 0);}
     .ticker-item:hover{color:rgba(255,255,255,0.8);}
     @keyframes ticker{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 
@@ -195,7 +195,9 @@
 <body>
 
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">MENAARC<sup>®</sup></a>
+ <a href="index.html" class="nav-logo">
+  <img src="images/Menaarc_logo.png" alt="Menaarc" height="145" />
+</a>
   <ul class="nav-links">
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
@@ -224,7 +226,7 @@
   <div class="page-hero-inner">
     <p class="page-hero-label">Who We Work With</p>
     <h1>Trusted by <em>Global Brands</em></h1>
-    <p>From Sacoor Brothers to Tim Hortons — Menaarc has delivered for some of the world's most recognised retail and F&B brands operating across the UAE and wider Middle East.</p>
+    <p>From Sacoor Brothers to Tim Hortons, Menaarc has delivered for some of the world's most recognised retail and F&B brands operating across the UAE and wider Middle East.</p>
   </div>
 </section>
 
@@ -251,47 +253,45 @@
 <!-- SCROLLING TICKER -->
 <div class="ticker-section" aria-hidden="true">
   <div class="ticker-track" id="tickerTrack">
-    <span class="ticker-item">Sacoor Brothers</span>
-    <span class="ticker-item">Paul &amp; Shark</span>
-    <span class="ticker-item">Rosa's Thai</span>
-    <span class="ticker-item">Sushi Art</span>
-    <span class="ticker-item">Peet's Coffee</span>
-    <span class="ticker-item">Tim Hortons</span>
-    <span class="ticker-item">Popeyes</span>
-    <span class="ticker-item">Marugame Udon</span>
-    <span class="ticker-item">Nando's</span>
-    <span class="ticker-item">Papa Johns</span>
-    <span class="ticker-item">Bateel</span>
-    <span class="ticker-item">Brooks Brothers</span>
-    <span class="ticker-item">Vero Moda</span>
-    <span class="ticker-item">Jack &amp; Jones</span>
-    <span class="ticker-item">German Doner Kebab</span>
-    <span class="ticker-item">Max &amp; Co</span>
-    <span class="ticker-item">Sports Central</span>
-    <span class="ticker-item">Giordano</span>
-    <span class="ticker-item">Wings Stop</span>
-    <span class="ticker-item">Tortilla</span>
+    <span class="ticker-item"> <img src="Images/sacoorbrothers.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/paulandshark.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/RosasThai.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/sushiart.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/peetscoffee.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/timhortons.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/popeyes.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/marugameudon.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/nandos.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/papajohns.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/bateel.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/brooksbrothers.png" height="40"> </span>
+    <span class="ticker-item"> <img src="Images/veromoda.png" height="50"> </span> 
+    <span class="ticker-item"> <img src="Images/Jack & Jones.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/GDK.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/maxandco.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/Giordano.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/wingstop.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/Tortilla.png" height="50"> </span>
     <!-- duplicate for seamless loop -->
-    <span class="ticker-item">Sacoor Brothers</span>
-    <span class="ticker-item">Paul &amp; Shark</span>
-    <span class="ticker-item">Rosa's Thai</span>
-    <span class="ticker-item">Sushi Art</span>
-    <span class="ticker-item">Peet's Coffee</span>
-    <span class="ticker-item">Tim Hortons</span>
-    <span class="ticker-item">Popeyes</span>
-    <span class="ticker-item">Marugame Udon</span>
-    <span class="ticker-item">Nando's</span>
-    <span class="ticker-item">Papa Johns</span>
-    <span class="ticker-item">Bateel</span>
-    <span class="ticker-item">Brooks Brothers</span>
-    <span class="ticker-item">Vero Moda</span>
-    <span class="ticker-item">Jack &amp; Jones</span>
-    <span class="ticker-item">German Doner Kebab</span>
-    <span class="ticker-item">Max &amp; Co</span>
-    <span class="ticker-item">Sports Central</span>
-    <span class="ticker-item">Giordano</span>
-    <span class="ticker-item">Wings Stop</span>
-    <span class="ticker-item">Tortilla</span>
+    <span class="ticker-item"> <img src="Images/sacoorbrothers.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/paulandshark.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/RosasThai.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/sushiart.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/peetscoffee.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/timhortons.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/popeyes.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/marugameudon.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/nandos.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/papajohns.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/bateel.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/brooksbrothers.png" height="40"> </span>
+    <span class="ticker-item"> <img src="Images/veromoda.png" height="50"> </span> 
+    <span class="ticker-item"> <img src="Images/Jack & Jones.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/GDK.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/maxandco.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/Giordano.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/wingstop.png" height="50"> </span>
+    <span class="ticker-item"> <img src="Images/Tortilla.png" height="50"> </span>
   </div>
 </div>
 
@@ -403,7 +403,7 @@
     <div class="trust-left reveal">
       <p class="section-label">Why They Choose Menaarc</p>
       <h2>Built on <em>Delivery,<br>Not Promises</em></h2>
-      <p>Global brands trust Menaarc because we understand the speed, compliance, and quality standards required to operate at scale in the UAE market. We don't just fit out spaces — we become part of the expansion team.</p>
+      <p>Global brands trust Menaarc because we understand the speed, compliance, and quality standards required to operate at scale in the UAE market. We don't just fit out spaces, we become part of the expansion team.</p>
       <button class="btn-primary" onclick="openPopup()">Work With Us →</button>
     </div>
     <div class="trust-right reveal">
@@ -421,7 +421,7 @@
       </div>
       <div class="trust-item">
         <div class="trust-item-title">Single Point of Contact</div>
-        <p class="trust-item-body">Design, technical drawings, authority submissions, MEP, and project management — all under one roof, with one accountable team.</p>
+        <p class="trust-item-body">Design, technical drawings, authority submissions, MEP, and project management. All under one roof, with one accountable team.</p>
       </div>
     </div>
   </div>
